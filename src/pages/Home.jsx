@@ -12,24 +12,35 @@ function Home() {
             <div>
 
                 {/*Home Banner*/}
-                <div className='h-32 w-full bg-slate-300 relative w-full'>
+                <div className='h-32 w-full relative w-full'>
                     <div className='bg-[url(./src/assets/home/banner.jpg)] h-full w-full bg-cover bg-center' />
                     
                 </div>
 
-                <div className='flex'>
+                <div className='flex h-64'>
 
-                    <div className='h-72 w-2/10 bg-[var(--color-primary)] text-white flex flex-col'>
+                    <div className='w-2/10 bg-[var(--color-primary)] text-white flex flex-col'>
                         
-                        <button onClick={() => setMenu('FIXTURES')} className='block cursor-pointer h-10'>FIXTURES</button>
+                        <button onClick={() => setMenu('FIXTURES')} className='block cursor-pointer h-10 mt-2'>FIXTURES</button>
                         <button onClick={() => setMenu('SHOP')} className='block cursor-pointer h-10'>SHOP</button>
-                        <button>MENU3</button>
 
                     </div>
 
                     <div className='w-8/10 overflow-x-auto flex items-center scroll-smooth no-scrollbar'>
                         {activeMenu === 'FIXTURES' && <Fixtures />}
                         {activeMenu === 'SHOP' && <Shop />}
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div className='h-10 w-full bg-[var(--color-primary)] flex items-center justify-center'>
+                        <p className='text-white'>LAST NEWS</p>
+                    </div>
+
+                    <div className='h-64 w-full bg-black'>
+                        
                     </div>
 
                 </div>

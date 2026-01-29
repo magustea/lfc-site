@@ -7,7 +7,7 @@ function App() {
     <>
       <div>
 
-        <div className='bg-slate-200 h-screen lg:w-5/10 mx-auto'>
+        <div className='h-screen lg:w-5/10 mx-auto'>
 
           <Nav />
 

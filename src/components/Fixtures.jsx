@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function Fixtures() {
 
-    const API_KEY = 'api key here!!!!';
+    const API_KEY = '9d2bd7b0c4aa42ab85afe64a8ff27de7';
 
     const [fixtures, setFixtures] = useState([]);
 
@@ -17,7 +17,7 @@ function Fixtures() {
         
                 const filtered = response.data.matches
                     .filter(m => ['PL', 'CL'].includes(m.competition.code))
-                    .slice(0, 5);
+                    .slice(0, 10);
                 
                 setFixtures(filtered);
 
@@ -34,20 +34,21 @@ function Fixtures() {
 
     return (
         <>
-            <div className='flex'>
+            <div className='flex h-full items-center'>
 
                 {fixtures.map((match) => (
 
-                    <div key={match.id} className='h-72 w-64 flex-shrink-0 shadow flex flex-col justify-between p-2'>
+                    <div key={match.id} className='w-48 flex-shrink-0 flex flex-col p-2'>
                         
-                        <div className='flex justify-between items-center text-sm pb-10'>
+                        <div className='items-center text-sm'>
 
                             <p>{match.competition.name}</p>
-                            <p>{new Date(match.utcDate).toLocaleDateString('en-gb')}</p>
+                            
+                            <p>{new Date(match.utcDate).toLocaleDateString('en-GB')}</p>
 
                         </div>
 
-                        <div className='flex flex-col gap-4 my-auto'>
+                        <div className='flex flex-col justify-center pt-5 gap-2'>
 
                             <div className='flex items-center gap-3'>
 
@@ -65,9 +66,9 @@ function Fixtures() {
 
                             </div>
 
-                            <div className='text-center py-5'>
+                            <div className='text-center pt-5'>
 
-                                {new Date(match.utcDate).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                                {new Date(match.utcDate).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
 
                             </div>
 

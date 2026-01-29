@@ -5,6 +5,7 @@
 
 :root {
   --color-primary: #c83f49;
+  --color-secondary: #00B2A9;
 }
 
 @layer utilities {
